@@ -84,8 +84,15 @@ export function pubDate(recordedOn: string): string {
   return utc.toUTCString().replace("GMT", "+0000");
 }
 
+/** Characters XML 1.0 doesn't allow (C0 controls other than tab, LF, CR; U+FFFE/FFFF). */
+// eslint-disable-next-line no-control-regex
+const INVALID_XML_CHARS = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\uFFFE\uFFFF]/g;
+
 export function esc(text: string): string {
   return text
+    // GRC's pages use U+001E where a hyphen belongs ("long\u001Eawaited").
+    .replace(/\u001E/g, "-")
+    .replace(INVALID_XML_CHARS, "")
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")

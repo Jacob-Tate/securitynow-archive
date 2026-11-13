@@ -21,6 +21,11 @@ test("dates episodes at 19:00 Pacific, in summer and winter", () => {
   assert.equal(pubDate("2026-11-10"), "Wed, 11 Nov 2026 03:00:00 +0000");
 });
 
+test("replaces or drops characters XML doesn't allow", () => {
+  assert.equal(esc("long\u001Eawaited"), "long-awaited");
+  assert.equal(esc("a\u0000b\u0007c\td\ne"), "abc\td\ne");
+});
+
 test("escapes XML special characters", () => {
   assert.equal(esc(`a & b < c > "d" 'e'`), "a &amp; b &lt; c &gt; &quot;d&quot; &apos;e&apos;");
 });

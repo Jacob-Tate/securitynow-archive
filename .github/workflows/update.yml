@@ -25,8 +25,8 @@ jobs:
           node-version: 22
           cache: npm
 
-      - name: Install pdfimages
-        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
+      - name: Install pdfimages and xmllint
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils libxml2-utils
 
       - run: npm ci
       - run: npm run typecheck
@@ -41,6 +41,9 @@ jobs:
         env:
           OWNER: ${{ github.repository_owner }}
           REPO: ${{ github.event.repository.name }}
+
+      - name: Check the feed is well-formed XML
+        run: xmllint --noout docs/feed.xml
 
       - name: Commit changes
         run: |
