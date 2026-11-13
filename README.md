@@ -5,10 +5,10 @@ An unofficial RSS feed of **every** Security Now episode, with each episode's
 
 **Feed:** https://jacob-tate.github.io/securitynow-archive/feed.xml
 
-TWiT's own feed only carries the latest ~20 episodes. This one is rebuilt daily
-from [grc.com](https://www.grc.com/securitynow.htm), Steve Gibson's episode
-listings, so a podcast app (or Audiobookshelf, or Ryot) can see the whole back
-catalogue.
+TWiT's own feed only carries the latest ~20 episodes. This one is rebuilt every
+Wednesday from [grc.com](https://www.grc.com/securitynow.htm), Steve Gibson's
+episode listings, so a podcast app (or Audiobookshelf, or Ryot) can see the
+whole back catalogue.
 
 ## What's in each episode
 
@@ -25,16 +25,19 @@ same UTC date as TWiT's feed so episodes line up across apps.
 
 ## How it works
 
-A [daily GitHub Action](.github/workflows/update.yml) runs `src/index.ts`:
+A [weekly GitHub Action](.github/workflows/update.yml) runs `src/index.ts`:
 
 1. Scrapes grc.com's current-year page and last year's archive page. Older
    archive pages never change, so they're fetched once and kept in
    `data/state.json`.
 2. For each episode not yet checked, downloads the show-notes PDF and extracts
    the largest page-1 image with poppler's `pdfimages` into `docs/images/`.
-   Each PDF is processed once (recent episodes are re-checked for 30 days in
+   Each PDF is processed once (recent episodes are re-checked for 35 days in
    case the notes are posted late).
-3. Writes `docs/feed.xml`, which GitHub Pages serves.
+3. Writes `docs/feed.xml`, validated with `xmllint`, which GitHub Pages serves.
+
+It runs on Wednesdays, after Tuesday's episode is posted. If an episode shows
+up late, run it manually from the Actions tab.
 
 ## Running locally
 

@@ -2,8 +2,9 @@ name: Update archive
 
 on:
   schedule:
-    # Daily. New episodes are recorded Tuesday afternoons (Pacific) and appear on grc.com soon after.
-    - cron: "17 12 * * *"
+    # Weekly, Wednesday 12:17 UTC. One episode a week, recorded Tuesday afternoon
+    # Pacific and posted on grc.com that night. Run manually if GRC posts late.
+    - cron: "17 12 * * 3"
   workflow_dispatch:
 
 permissions:

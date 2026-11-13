@@ -9,7 +9,7 @@ Published on GitHub Pages from `docs/`.
 - `src/pictures.ts`: download show notes, pick the largest page-1 image, extract with `pdfimages`.
 - `src/feed.ts`: RSS XML. Item guid `grc-sn-<n>`, pubDate 19:00 Pacific on the recording day.
 - `src/state.ts`: `data/state.json` cache (episodes, picture results, scraped years). Committed.
-- `src/index.ts`: entry point run by `.github/workflows/update.yml` daily.
+- `src/index.ts`: entry point run by `.github/workflows/update.yml` weekly (Wednesday).
 - `docs/`: GitHub Pages output (`feed.xml`, `index.html`, `images/`). Generated; committed by the Action.
 
 ## Rules

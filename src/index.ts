@@ -12,7 +12,7 @@ const STATE_FILE = "data/state.json";
 const DOCS_DIR = "docs";
 const IMAGES_DIR = join(DOCS_DIR, "images");
 /** Show notes are sometimes posted after the episode; keep looking for this long. */
-const RECHECK_MISSING_PICTURE_DAYS = 30;
+const RECHECK_MISSING_PICTURE_DAYS = 35;
 const PICTURE_CONCURRENCY = 2;
 
 process.on("unhandledRejection", (reason) => {
