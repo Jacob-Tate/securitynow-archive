@@ -30,7 +30,10 @@ async function main(): Promise<void> {
   await addPictures(state, maxNewPictures);
 
   const episodes = Object.values(state.episodes);
-  await writeFile(join(DOCS_DIR, "feed.xml"), buildFeed(episodes, state.pictures, { baseUrl, generatedAt: new Date() }));
+  // Dated by the newest episode, not the run, so unchanged feeds don't produce a commit.
+  const newest = episodes.reduce((a, b) => (b.recordedOn > a ? b.recordedOn : a), "1970-01-01");
+  const generatedAt = new Date(`${newest}T00:00:00Z`);
+  await writeFile(join(DOCS_DIR, "feed.xml"), buildFeed(episodes, state.pictures, { baseUrl, generatedAt }));
   await writeFile(join(DOCS_DIR, "index.html"), indexPage(baseUrl, episodes.length));
   await saveState(STATE_FILE, state);
   const withPictures = Object.values(state.pictures).filter((p) => p.file).length;
