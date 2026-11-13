@@ -1,0 +1,25 @@
+{
+  "name": "securitynow-archive",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-archive RSS feed for the Security Now podcast, with each episode's Picture of the Week",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/index.js",
+    "test": "node --import tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "cheerio": "1.0.0",
+    "domhandler": "5.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "22.9.0",
+    "tsx": "4.19.2",
+    "typescript": "5.6.3"
+  }
+}
