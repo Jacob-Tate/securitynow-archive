@@ -6,21 +6,34 @@
 <atom:link href="https://jacob-tate.github.io/securitynow-archive/feed.xml" rel="self" type="application/rss+xml"/>
 <description>Every episode of Security Now with Steve Gibson and Leo Laporte, built from grc.com, with each episode's Picture of the Week. Unofficial.</description>
 <language>en-us</language>
-<lastBuildDate>Tue, 10 Nov 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 17 Nov 2026 00:00:00 GMT</lastBuildDate>
 <itunes:author>Steve Gibson, Leo Laporte</itunes:author>
 <itunes:image href="https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/a1/be/2b/a1be2b5b-416d-eb8b-f008-dbf8f4dad378/mza_13520720204623959175.jpg/1400x1400bb.jpg"/>
 <image><url>https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/a1/be/2b/a1be2b5b-416d-eb8b-f008-dbf8f4dad378/mza_13520720204623959175.jpg/1400x1400bb.jpg</url><title>Security Now (Full Archive)</title><link>https://www.grc.com/securitynow.htm</link></image>
 <itunes:category text="Technology"/>
 <itunes:explicit>false</itunes:explicit>
 <item>
+<title>SN 1105: Formal Code Verification</title>
+<guid isPermaLink="false">grc-sn-1105</guid>
+<pubDate>Wed, 18 Nov 2026 03:00:00 +0000</pubDate>
+<link>https://www.grc.com/securitynow.htm#1105</link>
+<description>&lt;p&gt;&lt;img src=&quot;https://jacob-tate.github.io/securitynow-archive/images/sn-1105.jpg&quot; alt=&quot;Picture of the Week&quot;/&gt;&lt;/p&gt;&lt;p&gt;• Last week&amp;apos;s Microsoft 365 and FAA nationwide ground stops. • Riding the Patch Tuesday rollercoaster. • Speaking of Patch Tuesday: the return of Nightmare Eclipse. • Synology patches a critical 9.8 remote authentication flaw. • The unexpected revocation of GRC&amp;apos;s code signing certificate. • “Weight-space programming” and its implication for AI. • SpinRite for UEFI progress report. • Why only encrypting every third block is not okay. • The holy grail of Formal Code Verification.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://www.grc.com/sn/sn-1105-notes.pdf&quot;&gt;Show notes&lt;/a&gt; &amp;middot; &lt;a href=&quot;https://www.grc.com/sn/sn-1105.htm&quot;&gt;Transcript&lt;/a&gt;&lt;/p&gt;</description>
+<enclosure url="https://media.grc.com/sn/sn-1105.mp3" length="68000000" type="audio/mpeg"/>
+<itunes:episode>1105</itunes:episode>
+<itunes:episodeType>full</itunes:episodeType>
+<itunes:duration>8520</itunes:duration>
+<itunes:image href="https://jacob-tate.github.io/securitynow-archive/images/sn-1105.jpg"/>
+</item>
+<item>
 <title>SN 1104: The Hole in OpenSSH</title>
 <guid isPermaLink="false">grc-sn-1104</guid>
 <pubDate>Wed, 11 Nov 2026 03:00:00 +0000</pubDate>
 <link>https://www.grc.com/securitynow.htm#1104</link>
-<description>&lt;p&gt;&lt;img src=&quot;https://jacob-tate.github.io/securitynow-archive/images/sn-1104.jpg&quot; alt=&quot;Picture of the Week&quot;/&gt;&lt;/p&gt;&lt;p&gt;• A surprising (!) announcement regarding SpinRite. • What is being “AI-pilled” and how does it happen? • OpenAI just released GPT-6 Cyber. What does that mean? • An irresponsible hacker published 30+ N-Able 0-days. • 700 French refrigerators hacked. What&amp;apos;s next? • Lots of listener feedback about the Cloudflare tunneling solution, Voyager 1, true hardware drive encryption, the random number 4 and the amount of debris in orbit. • Then we look at a 10-year old serious SSH authentication bug (that&amp;apos;s kinda wonderful).&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://www.grc.com/sn/sn-1104-notes.pdf&quot;&gt;Show notes&lt;/a&gt;&lt;/p&gt;</description>
+<description>&lt;p&gt;&lt;img src=&quot;https://jacob-tate.github.io/securitynow-archive/images/sn-1104.jpg&quot; alt=&quot;Picture of the Week&quot;/&gt;&lt;/p&gt;&lt;p&gt;• A surprising (!) announcement regarding SpinRite. • What is being “AI-pilled” and how does it happen? • OpenAI just released GPT-6 Cyber. What does that mean? • An irresponsible hacker published 30+ N-Able 0-days. • 700 French refrigerators hacked. What&amp;apos;s next? • Lots of listener feedback about the Cloudflare tunneling solution, Voyager 1, true hardware drive encryption, the random number 4 and the amount of debris in orbit. • Then we look at a 10-year old serious SSH authentication bug (that&amp;apos;s kinda wonderful).&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://www.grc.com/sn/sn-1104-notes.pdf&quot;&gt;Show notes&lt;/a&gt; &amp;middot; &lt;a href=&quot;https://www.grc.com/sn/sn-1104.htm&quot;&gt;Transcript&lt;/a&gt;&lt;/p&gt;</description>
 <enclosure url="https://media.grc.com/sn/sn-1104.mp3" length="66000000" type="audio/mpeg"/>
 <itunes:episode>1104</itunes:episode>
 <itunes:episodeType>full</itunes:episodeType>
+<itunes:duration>8340</itunes:duration>
 <itunes:image href="https://jacob-tate.github.io/securitynow-archive/images/sn-1104.jpg"/>
 </item>
 <item>
